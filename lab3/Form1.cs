@@ -16,7 +16,6 @@ namespace lab3
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             int a, b, res;
@@ -24,12 +23,12 @@ namespace lab3
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a + b;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + "+" + b.ToString() + "=" + res.ToString());
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 res2 = x + y;
-                MessageBox.Show("Результат: " + res2.ToString());
+                listBox1.Items.Insert(0, x.ToString() + "+" + y.ToString() + "=" + res2.ToString());
             }           
             else
             {
@@ -46,12 +45,12 @@ namespace lab3
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a - b;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + "-" + b.ToString() + "=" + res.ToString());
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 res2 = x - y;
-                MessageBox.Show("Результат: " + res2.ToString());
+                listBox1.Items.Insert(0, x.ToString() + "-" + y.ToString() + "=" + res2.ToString());
             }
             else
             {
@@ -66,12 +65,12 @@ namespace lab3
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a * b;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + "*" + b.ToString() + "=" + res.ToString());
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 res2 = x * y;
-                MessageBox.Show("Результат: " + res2.ToString());
+                listBox1.Items.Insert(0, x.ToString() + "*" + y.ToString() + "=" + res2.ToString());
             }
             else
             {
@@ -84,8 +83,15 @@ namespace lab3
             double x, y, res;
             if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
-                res = x / y;
-                MessageBox.Show("Результат: " + res.ToString());
+                if (y != 0)
+                {
+                    res = x / y;
+                    listBox1.Items.Insert(0, x.ToString() + "/" + y.ToString() + "=" + res.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("на 0 делить нельзя", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -132,23 +138,23 @@ namespace lab3
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 if (a > b)
-                {
-                    MessageBox.Show(a.ToString() + ">" + b.ToString());
+                {                  
+                    listBox1.Items.Insert(0, a.ToString() + ">" + b.ToString() + "?"  + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(b.ToString() + ">" + a.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + ">" + b.ToString() + "?" + "     net");
                 }
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 if (x > y)
                 {
-                    MessageBox.Show(x.ToString() + ">" + y.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(y.ToString() + ">" + x.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     net");
                 }
             }
             else
@@ -164,22 +170,22 @@ namespace lab3
             {
                 if (a < b)
                 {
-                    MessageBox.Show(a.ToString() + "<" + b.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + "<" + b.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(b.ToString() + "<" + a.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + "<" + b.ToString() + "?" + "     net");
                 }
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 if (x < y)
                 {
-                    MessageBox.Show(x.ToString() + "<" + y.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + "<" + y.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(y.ToString() + "<" + x.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + "<" + y.ToString() + "?" + "     net");
                 }
             }
             else
@@ -196,22 +202,22 @@ namespace lab3
             {
                 if (a >= b)
                 {
-                    MessageBox.Show(a.ToString() + ">=" + b.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + ">=" + b.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(b.ToString() + ">=" + a.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + ">=" + b.ToString() + "?" + "     net");
                 }
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 if (x >= y)
                 {
-                    MessageBox.Show(x.ToString() + ">=" + y.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(y.ToString() + ">=" + x.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     net");
                 }
             }
             else
@@ -228,22 +234,22 @@ namespace lab3
             {
                 if (a <= b)
                 {
-                    MessageBox.Show(a.ToString() + "<=" + b.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + "<=" + b.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(b.ToString() + "<=" + a.ToString());
+                    listBox1.Items.Insert(0, a.ToString() + "<=" + b.ToString() + "?" + "     net");
                 }
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 if (x <= y)
                 {
-                    MessageBox.Show(x.ToString() + "<=" + y.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + "<=" + y.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show(y.ToString() + "<=" + x.ToString());
+                    listBox1.Items.Insert(0, x.ToString() + "<=" + y.ToString() + "?" + "     da");
                 }
             }
             else
@@ -255,11 +261,17 @@ namespace lab3
         private void button10_Click(object sender, EventArgs e)
         {
             int a, b, res;
+            bool x, y, res2;
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a & b;
-                MessageBox.Show("Результат: " + res.ToString());
-            }           
+                listBox1.Items.Insert(0, a.ToString() + "&" + b.ToString() + "=" + res.ToString());
+            }
+            else if (bool.TryParse(textBox1.Text, out x) && bool.TryParse(textBox2.Text, out y))
+            {
+                res2 = x & y;
+                listBox1.Items.Insert(0, x.ToString() + " & " + y.ToString() + "=" + res2.ToString());
+            }
             else
             {
                 MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -269,10 +281,16 @@ namespace lab3
         private void button11_Click(object sender, EventArgs e)
         {
             int a, b, res;
+            bool x, y, res2;
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a | b;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + " | " + b.ToString() + "=" + res.ToString());
+            }
+            else if (bool.TryParse(textBox1.Text, out x) && bool.TryParse(textBox2.Text, out y))
+            {
+                res2 = x | y;
+                listBox1.Items.Insert(0, x.ToString() + " | " + y.ToString() + "=" + res2.ToString());
             }
             else
             {
@@ -283,10 +301,16 @@ namespace lab3
         private void button12_Click(object sender, EventArgs e)
         {
             int a, b, res;
+            bool x, y, res2;
             if (int.TryParse(textBox1.Text, out a) && int.TryParse(textBox2.Text, out b))
             {
                 res = a ^ b;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + " ^ " + b.ToString() + "=" + res.ToString());
+            }
+            else if (bool.TryParse(textBox1.Text, out x) && bool.TryParse(textBox2.Text, out y))
+            {
+                res2 = x ^ y;
+                listBox1.Items.Insert(0, x.ToString() + " ^ " + y.ToString() + "=" + res2.ToString());
             }
             else
             {
@@ -296,11 +320,15 @@ namespace lab3
 
         private void button13_Click(object sender, EventArgs e)
         {
-            int a, res;
+            int a;
+            bool x;
             if (int.TryParse(textBox1.Text, out a) && textBox2.Text == "")
             {
-                res =  ~ a;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0," ~" + a.ToString() + "=" + (~ a).ToString());
+            }
+            else if (bool.TryParse(textBox1.Text, out x) && textBox2.Text == "")
+            {
+                listBox1.Items.Insert(0, " ~" + x.ToString() + "=" + (!x).ToString());
             }
             else
             {
@@ -314,12 +342,22 @@ namespace lab3
             double x;
             if (int.TryParse(textBox1.Text, out a) && textBox2.Text == "")
             {
-                    MessageBox.Show("Результат: " + Math.Asin(a).ToString());
-             
+
+                if (a > 1 || a < -1)
+                {
+                    MessageBox.Show("число не принадлежит отрезку 1,-1", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
+                }
+                else
+                listBox1.Items.Insert(0, "arcsin(" + a.ToString() + ")" + "=" + Math.Asin(a).ToString());             
             }
             else if (double.TryParse(textBox1.Text, out x) && textBox2.Text == "")
             {
-                MessageBox.Show("Результат: " + Math.Asin(x).ToString());
+                if (x > 1 || x < -1)
+                {
+                    MessageBox.Show("число не принадлежит отрезку 1,-1", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                listBox1.Items.Insert(0, "arcsin(" + x.ToString() + ")" + "=" + Math.Asin(x).ToString());
             }
             else
             {
@@ -333,12 +371,12 @@ namespace lab3
             double x;
             if (int.TryParse(textBox1.Text, out a) && textBox2.Text == "")
             {
-                MessageBox.Show("Результат: " + Math.Atan(a).ToString());
-
+                listBox1.Items.Insert(0, "arctan(" + a.ToString() + ")" + "=" + Math.Atan(a).ToString());
             }
             else if (double.TryParse(textBox1.Text, out x) && textBox2.Text == "")
             {
-                MessageBox.Show("Результат: " + Math.Atan(x).ToString());
+               
+                listBox1.Items.Insert(0, "arcatan(" + x.ToString() + ")" + "=" + Math.Atan(x).ToString());
             }
             else
             {
@@ -348,11 +386,10 @@ namespace lab3
 
         private void button16_Click(object sender, EventArgs e)
         {
-            double a, b, res;
+            double a, b;
             if (double.TryParse(textBox1.Text, out a) && double.TryParse(textBox2.Text, out b))
             {
-                res = Math.Pow(b, 1 / a);
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, a.ToString() + "√" + b.ToString() + "=" + Math.Pow(b, 1 / a).ToString());
             }
             else
             {
@@ -366,7 +403,7 @@ namespace lab3
             if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 res = x % y;
-                MessageBox.Show("Результат: " + res.ToString());
+                listBox1.Items.Insert(0, x.ToString() + "%" + y.ToString() + "=" + res.ToString());
             }
             else
             {
@@ -381,10 +418,10 @@ namespace lab3
             {
                 if (Math.Truncate(Math.Log(a, 4)) == (Math.Log(a, 4)))
                 {
-                    MessageBox.Show("da");
+                    listBox1.Items.Insert(0, "da");
                 }       
                 else
-                    MessageBox.Show("da");
+                    listBox1.Items.Insert(0, "net");
             }
             else
             {
