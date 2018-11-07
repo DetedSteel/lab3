@@ -107,22 +107,22 @@ namespace lab3
             {
                 if (a == b)
                 {
-                    MessageBox.Show("chisla ravni");
+                    listBox1.Items.Insert(0, a.ToString() + "=" + b.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show("chisla ne ravni");
+                    listBox1.Items.Insert(0, a.ToString() + "=" + b.ToString() + "?" + "     net");
                 }
             }
             else if (double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y))
             {
                 if (x == y)
                 {
-                    MessageBox.Show("chisla ravni");
+                    listBox1.Items.Insert(0, x.ToString() + "=" + y.ToString() + "?" + "     da");
                 }
                 else
                 {
-                    MessageBox.Show("chisla ne ravni");
+                    listBox1.Items.Insert(0, x.ToString() + "=" + y.ToString() + "?" + "     net");
                 }
             }
             else
