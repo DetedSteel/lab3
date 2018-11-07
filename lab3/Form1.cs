@@ -205,10 +205,30 @@ namespace lab3
                     listBox1.Items.Insert(0, x.ToString() + "=" + y.ToString() + "?" + "     net");
                 }
             }
+            else if (!double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y) && textBox1.Text != "")
+            {
+                MessageBox.Show("первый аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!double.TryParse(textBox2.Text, out y) && double.TryParse(textBox1.Text, out x) && textBox2.Text != "")
+            {
+                MessageBox.Show("второй аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && double.TryParse(textBox2.Text, out x))
+            {
+                MessageBox.Show("вы не ввели первое число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox2.Text == "" && textBox1.Text != "" && double.TryParse(textBox1.Text, out x))
+            {
+                MessageBox.Show("вы не ввели второе число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("вы не ввели оба числа", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -237,9 +257,29 @@ namespace lab3
                     listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     net");
                 }
             }
+            else if (!double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y) && textBox1.Text != "")
+            {
+                MessageBox.Show("первый аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!double.TryParse(textBox2.Text, out y) && double.TryParse(textBox1.Text, out x) && textBox2.Text != "")
+            {
+                MessageBox.Show("второй аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && double.TryParse(textBox2.Text, out x))
+            {
+                MessageBox.Show("вы не ввели первое число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox2.Text == "" && textBox1.Text != "" && double.TryParse(textBox1.Text, out x))
+            {
+                MessageBox.Show("вы не ввели второе число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("вы не ввели оба числа", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void button7_Click(object sender, EventArgs e)
@@ -268,9 +308,29 @@ namespace lab3
                     listBox1.Items.Insert(0, x.ToString() + "<" + y.ToString() + "?" + "     net");
                 }
             }
+            else if (!double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y) && textBox1.Text != "")
+            {
+                MessageBox.Show("первый аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!double.TryParse(textBox2.Text, out y) && double.TryParse(textBox1.Text, out x) && textBox2.Text != "")
+            {
+                MessageBox.Show("второй аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && double.TryParse(textBox2.Text, out x))
+            {
+                MessageBox.Show("вы не ввели первое число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox2.Text == "" && textBox1.Text != "" && double.TryParse(textBox1.Text, out x))
+            {
+                MessageBox.Show("вы не ввели второе число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("вы не ввели оба числа", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -300,9 +360,29 @@ namespace lab3
                     listBox1.Items.Insert(0, x.ToString() + ">" + y.ToString() + "?" + "     net");
                 }
             }
+            else if (!double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y) && textBox1.Text != "")
+            {
+                MessageBox.Show("первый аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!double.TryParse(textBox2.Text, out y) && double.TryParse(textBox1.Text, out x) && textBox2.Text != "")
+            {
+                MessageBox.Show("второй аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && double.TryParse(textBox2.Text, out x))
+            {
+                MessageBox.Show("вы не ввели первое число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox2.Text == "" && textBox1.Text != "" && double.TryParse(textBox1.Text, out x))
+            {
+                MessageBox.Show("вы не ввели второе число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("вы не ввели оба числа", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -332,9 +412,29 @@ namespace lab3
                     listBox1.Items.Insert(0, x.ToString() + "<=" + y.ToString() + "?" + "     da");
                 }
             }
+            else if (!double.TryParse(textBox1.Text, out x) && double.TryParse(textBox2.Text, out y) && textBox1.Text != "")
+            {
+                MessageBox.Show("первый аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!double.TryParse(textBox2.Text, out y) && double.TryParse(textBox1.Text, out x) && textBox2.Text != "")
+            {
+                MessageBox.Show("второй аргумент не число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && double.TryParse(textBox2.Text, out x))
+            {
+                MessageBox.Show("вы не ввели первое число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox2.Text == "" && textBox1.Text != "" && double.TryParse(textBox1.Text, out x))
+            {
+                MessageBox.Show("вы не ввели второе число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("вы не ввели оба числа", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -352,9 +452,11 @@ namespace lab3
                 res2 = x & y;
                 listBox1.Items.Insert(0, x.ToString() + " & " + y.ToString() + "=" + res2.ToString());
             }
+
+
             else
             {
-                MessageBox.Show("Неверные аргументы", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("оба аргумента не явл числами", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
