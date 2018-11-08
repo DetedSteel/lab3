@@ -694,8 +694,12 @@ namespace lab3
                 {
                     MessageBox.Show("корень чётной степени из отрицательного числа не сущ-ет", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (a % 2 != 0 && b < 0)
+                {
+                    listBox1.Items.Insert(0, a.ToString() + "√" + b.ToString() + "=" + (-Math.Pow(-b, 1 / a)).ToString());
+                }
                 else
-                listBox1.Items.Insert(0, a.ToString() + "√" + b.ToString() + "=" + Math.Pow(b, 1 / a).ToString());
+                    listBox1.Items.Insert(0, a.ToString() + "√" + b.ToString() + "=" + Math.Pow(b, 1 / a).ToString());
             }
             else if (!double.TryParse(textBox1.Text, out b) && double.TryParse(textBox2.Text, out a) && textBox1.Text != "")
             {
